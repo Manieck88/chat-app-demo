@@ -1,0 +1,17 @@
+.search-bar {
+    .search-input {
+        &::placeholder {
+            color: $color-placeholder;
+        }
+    }
+    .search-icon {
+        @include transition(color);
+        top: 8px;
+        left: 8px;
+        color: $color-placeholder;
+
+        &.active {
+            color: #000;
+        }
+    }
+}

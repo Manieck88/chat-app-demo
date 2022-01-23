@@ -1,0 +1,22 @@
+#side-nav-container {
+    background: linear-gradient(#4767b4, #3f52a2);
+
+    .side-nav {
+        &__link {
+            @include backgroundColorTransition();
+            border-bottom: 1px $color-primary-active solid;
+            color: $color-link-icon;
+
+            &:hover,
+            &.active {
+                background-color: $color-primary-active;
+                color: $color-link-icon-active;
+            }
+
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+}

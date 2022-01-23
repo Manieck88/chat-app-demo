@@ -1,0 +1,25 @@
+#users-list {
+    width: 35%;
+    max-width: 350px;
+    min-width: 250px;
+    background-color: $color-background-gray;
+
+    .users-list {
+        &-item {
+            @include backgroundColorTransition();
+            &:first-of-type {
+                border-top: $border-solid;
+            }
+            cursor: pointer;
+
+            &.active,
+            &:hover {
+                background-color: $color-background-white;
+            }
+
+            &.active {
+                border-right: 4px $color-primary-active solid;
+            }
+        }
+    }
+}

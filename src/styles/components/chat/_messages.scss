@@ -1,0 +1,53 @@
+#messages {
+    .messages-top-bar {
+        &-icon {
+            @include backgroundColorTransition();
+            cursor: pointer;
+
+            &:hover {
+                background-color: $color-background-gray !important;
+            }
+        }
+    }
+
+    .icon-button {
+        cursor: pointer;
+    }
+
+    .send-button {
+        @include backgroundColorTransition();
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-primary-active !important;
+        }
+    }
+
+    .message-text {
+        height: fit-content;
+
+        .arrow {
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+            top: 23px;
+        }
+
+        &.sent {
+            background-color: $sent-message-background;
+
+            .arrow {
+                border-left: 12px solid $sent-message-background;
+                right: -12px;
+            }
+        }
+
+        &.received {
+            background-color: $received-message-background;
+
+            .arrow {
+                border-right: 12px solid $received-message-background;
+                left: -12px;
+            }
+        }
+    }
+}
